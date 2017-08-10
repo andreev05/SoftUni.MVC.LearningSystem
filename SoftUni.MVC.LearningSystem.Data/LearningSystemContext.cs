@@ -7,9 +7,14 @@ namespace SoftUni.MVC.LearningSystem.Data
     public class LearningSystemContext : IdentityDbContext<ApplicationUser>
     {
         public LearningSystemContext()
-            : base("name=LearningSystemContext")
+            : base("DefaultConnection", throwIfV1Schema: false)
         {
 
+        }
+
+        public static LearningSystemContext Create()
+        {
+            return new LearningSystemContext();
         }
     }
 }
