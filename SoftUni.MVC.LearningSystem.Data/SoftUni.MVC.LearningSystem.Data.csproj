@@ -77,6 +77,10 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="LearningSystemContext.cs" />
+    <Compile Include="Migrations\201708141049449_one.cs" />
+    <Compile Include="Migrations\201708141049449_one.Designer.cs">
+      <DependentUpon>201708141049449_one.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
@@ -89,6 +93,11 @@
       <Project>{91D13B56-3443-4061-A7B9-0442A3E75464}</Project>
       <Name>SoftUni.MVC.LearningSystem.Models</Name>
     </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Migrations\201708141049449_one.resx">
+      <DependentUpon>201708141049449_one.cs</DependentUpon>
+    </EmbeddedResource>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

@@ -41,6 +41,13 @@ namespace SoftUni.MVC.LearningSystem.Data.Migrations
                 manager.Create(role);
             }
 
+            if(!context.Roles.Any(r => r.Name == "BlogAuthor"))
+            {
+                var store = new RoleStore<IdentityRole>(context);
+                var manager = new RoleManager<IdentityRole>(store);
+                var role = new IdentityRole("BlogAuthor");
+                manager.Create(role);
+            }
             //  This method will be called after migrating to the latest version.
 
             //  You can use the DbSet<T>.AddOrUpdate() helper extension method 
